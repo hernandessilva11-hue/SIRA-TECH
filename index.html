@@ -20,91 +20,79 @@ body {
     color: #fff;
     text-align: center;
 
-    /* ✅ FUNDO COM IMAGEM, DESLOCADA PARA BAIXO */
-    background: url("fundo-sira.png") no-repeat center top;
+    /* ✅ IMAGEM DO FUNDO IGUAL ANTES */
+    background: url("fundo-sira.png") no-repeat center center fixed;
     background-size: cover;
-    background-position-y: 140px; /* desce a imagem para aparecer mais */
 }
 
-/* ✅ FAIXA SUPERIOR COM LOGO */
-.header-banner {
-    width: 100%;
-    height: 120px;
-    background: rgba(0, 20, 10, 0.75);
-    backdrop-filter: blur(6px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* ✅ LOGO PEQUENO NO CANTO INFERIOR DIREITO */
+.logo-fixed {
     position: fixed;
-    top: 0;
-    z-index: 9999;
-    box-shadow: 0 0 18px rgba(0,255,170,0.9);
+    bottom: 20px;
+    right: 20px;
+    width: 90px;
+    filter: drop-shadow(0 0 10px rgba(0,255,170,0.8));
+    transition: 0.3s ease-in-out;
 }
 
-/* LOGO CENTRAL NA FAIXA */
-.header-banner img {
-    height: 85px;
-    filter: drop-shadow(0 0 18px #19ffb4);
-    transition: 0.3s;
+.logo-fixed:hover {
+    transform: scale(1.12);
 }
 
-.header-banner img:hover {
-    transform: scale(1.08);
-}
-
-/* TÍTULO */
+/* ✅ CONTAINER */
 .container {
-    padding-top: 200px; /* compensa faixa fixa */
+    padding-top: 120px;
     padding-bottom: 60px;
 }
 
+/* ✅ TÍTULO GIGANTE E NEON */
 h1 {
-    font-size: 55px;
-    letter-spacing: 4px;
+    font-size: 85px;
+    font-weight: 900;
+    letter-spacing: 6px;
     text-transform: uppercase;
-    font-weight: 800;
     color: #32ffb3;
-    text-shadow: 0 0 12px #32ffb3, 0 0 25px #00ffaa;
-    margin-bottom: 5px;
+    text-shadow: 0 0 18px #32ffb3, 0 0 40px #00ffaa;
+    margin-bottom: 10px;
 }
 
-/* SUBTÍTULO */
+/* ✅ SUBTÍTULO */
 h2 {
-    font-size: 26px;
-    font-weight: 600;
-    color: #90ffd5;
-    text-shadow: 0 0 10px rgba(0,255,170,0.7);
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #afffe6;
+    text-shadow: 0 0 12px rgba(0,255,170,0.7);
 }
 
 .line {
-    width: 260px;
+    width: 300px;
     height: 3px;
-    background: linear-gradient(90deg, transparent, #00ff9d, transparent);
+    background: linear-gradient(90deg, transparent, #00ffb3, transparent);
     margin: 15px auto 30px auto;
 }
 
-/* BOTÕES */
+/* ✅ BOTÕES */
 .button {
     display: block;
-    width: 340px;
+    width: 350px;
     margin: 15px auto;
     padding: 20px;
     border-radius: 25px;
     background-color: #00ffb3;
     color: #003321;
-    font-size: 22px;
+    font-size: 23px;
     font-weight: 600;
     text-decoration: none;
     transition: 0.3s;
-    box-shadow: 0px 0px 15px rgba(0,255,170,0.8);
+    box-shadow: 0px 0px 25px rgba(0,255,170,0.8);
 }
 
 .button:hover {
     transform: scale(1.07);
-    box-shadow: 0px 0px 25px rgba(0,255,170,1);
+    box-shadow: 0px 0px 45px rgba(0,255,170,1);
 }
 
-/* RODAPÉ */
 footer {
     margin-top: 60px;
     font-size: 14px;
@@ -116,15 +104,13 @@ footer {
 </head>
 <body>
 
-<!-- ✅ FAIXA COM O LOGO NO TOPO -->
-<div class="header-banner">
-    <img src="logo.png" alt="Logo SIRA TECH">
-</div>
+<!-- ✅ LOGO FIXO EMBAIXO DIREITA -->
+<img src="logo.png" class="logo-fixed" alt="Logo SIRA TECH">
 
-<!-- CONTEÚDO CENTRAL -->
 <div class="container">
 
-    <h1>SIRA TECH</h1>
+    <!-- ✅ TÍTULO GIGANTE -->
+    <h1>SIRA-TECH</h1>
     <div class="line"></div>
     <h2>Sistema Integrado de Rastreamento Agro</h2>
 
