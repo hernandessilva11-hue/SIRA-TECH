@@ -14,7 +14,7 @@
     }
 
     body {
-        background: url("fundo-sira.jpg") no-repeat center center/cover;
+        background: url("fundo-sira.png") no-repeat center center/cover;
         height: 100vh;
         overflow-x: hidden;
         scroll-behavior: smooth;
@@ -41,7 +41,6 @@
         padding: 20px;
     }
 
-    /* ✅ TÍTULO ULTRA VERDE NEON */
     h1 {
         font-size: 115px;
         font-weight: 900;
@@ -55,7 +54,6 @@
         margin-bottom: -10px;
     }
 
-    /* ✅ FRASE EMBAIXO DO TÍTULO */
     .sub-frase {
         font-size: 38px;
         color: #ffffff;
@@ -64,7 +62,6 @@
         text-shadow: 0 0 18px rgba(0,255,157,0.7);
     }
 
-    /* ✅ LINHA LUMINOSA */
     .line {
         width: 85%;
         height: 4px;
@@ -82,7 +79,6 @@
         text-shadow: 0 0 18px rgba(255,255,255,0.8);
     }
 
-    /* ✅ Botões verdes */
     .btn {
         width: 85%;
         max-width: 480px;
@@ -105,7 +101,6 @@
         box-shadow: 0 0 25px #00ff9d;
     }
 
-    /* ✅ Imagem dos animais */
     .animais {
         width: 85%;
         max-width: 1300px;
@@ -113,13 +108,11 @@
         animation: fadeIn 2s ease-in-out;
     }
 
-    /* ✅ Animação */
     @keyframes fadeIn {
         from { opacity: 0; transform: translateY(20px); }
         to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ✅ Logo inferior direito */
     .logo {
         position: fixed;
         right: 20px;
@@ -135,33 +128,20 @@
 <div class="overlay"></div>
 
 <div class="container">
-    <!-- ✅ TÍTULO E FRASE -->
     <h1>SIRA-TECH</h1>
     <p class="sub-frase">Inovação que conecta o campo ao futuro.</p>
 
     <div class="line"></div>
     <h2>Sistema Integrado de Rastreamento Agro</h2>
 
-    <!-- ✅ BOTÕES -->
-    <a href="https://siratechbrasil.com.br" target="_blank">
-        <button class="btn">🌐 Site Oficial</button>
-    </a>
+    <a href="https://siratechbrasil.com.br" target="_blank"><button class="btn">🌐 Site Oficial</button></a>
+    <a href="https://sira-tech.base44.app" target="_blank"><button class="btn">📱 Acessar App Web</button></a>
+    <a href="https://github.com/hernandessilva11-hue/SIRA-TECH-" target="_blank"><button class="btn">💻 Código do Projeto (GitHub)</button></a>
 
-    <a href="https://sira-tech.base44.app" target="_blank">
-        <button class="btn">📱 Acessar App Web</button>
-    </a>
-
-    <a href="https://github.com/hernandessilva11-hue/SIRA-TECH-" target="_blank">
-        <button class="btn">💻 Código do Projeto (GitHub)</button>
-    </a>
-
-    <!-- ✅ IMAGEM DOS ANIMAIS -->
     <img src="animais.png" class="animais" alt="Animais SIRA Tech">
 </div>
 
-<!-- ✅ LOGO NO CANTO -->
-<img src="logo.png" class="logo" alt="Logo SIRA TECH">
+<img src="logo.png" class="logo" alt="Logo">
 
 </body>
 </html>
-
