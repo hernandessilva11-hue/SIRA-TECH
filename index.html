@@ -20,29 +20,31 @@
         scroll-behavior: smooth;
     }
 
+    /* ✅ overlay agora fica atrás de tudo */
     .overlay {
-        background: rgba(0, 0, 0, 0.55);
-        position: absolute;
+        background: rgba(0, 0, 0, 0.45);
+        position: fixed;
         width: 100%;
         height: 100%;
         z-index: 1;
+        top: 0; left: 0;
     }
 
     .container {
         position: relative;
-        z-index: 2;
+        z-index: 3;
         height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        backdrop-filter: blur(2px);
         text-align: center;
         padding: 20px;
     }
 
+    /* ✅ Título neon */
     h1 {
-        font-size: 115px;
+        font-size: 110px;
         font-weight: 900;
         letter-spacing: 8px;
         text-transform: uppercase;
@@ -51,32 +53,30 @@
             0 0 25px #00ff9d,
             0 0 65px #00ff9d,
             0 0 120px #00ff9d;
-        margin-bottom: -10px;
     }
 
     .sub-frase {
-        font-size: 38px;
-        color: #ffffff;
-        margin-bottom: 15px;
+        font-size: 32px;
+        color: white;
         font-weight: 600;
-        text-shadow: 0 0 18px rgba(0,255,157,0.7);
+        margin-bottom: 8px;
+        text-shadow: 0 0 12px rgba(0,255,157,0.8);
     }
 
     .line {
-        width: 85%;
+        width: 80%;
         height: 4px;
         background: linear-gradient(90deg, transparent, #00ff9d, transparent);
         box-shadow: 0px 0px 15px #00ff9d;
-        margin: 10px auto 18px auto;
+        margin: 10px auto 20px auto;
     }
 
     h2 {
         color: white;
-        font-size: 42px;
-        font-weight: 700;
-        margin-bottom: 40px;
-        letter-spacing: 3px;
-        text-shadow: 0 0 18px rgba(255,255,255,0.8);
+        font-size: 38px;
+        font-weight: 600;
+        margin-bottom: 35px;
+        text-shadow: 0 0 15px rgba(255,255,255,0.8);
     }
 
     .btn {
@@ -86,39 +86,38 @@
         border: none;
         padding: 22px;
         margin: 14px;
-        border-radius: 12px;
+        border-radius: 14px;
         font-size: 26px;
         font-weight: bold;
         color: #003b1d;
         cursor: pointer;
         transition: 0.2s;
         text-transform: uppercase;
-        box-shadow: 0 0 15px #00ff9d;
+        box-shadow: 0 0 14px #00ff9d;
     }
 
     .btn:hover {
         transform: scale(1.05);
-        box-shadow: 0 0 25px #00ff9d;
+        box-shadow: 0 0 30px #00ff9d;
     }
 
+    /* ✅ deixa a imagem dos animais NA FRENTE do overlay */
     .animais {
-        width: 85%;
-        max-width: 1300px;
-        margin-top: 40px;
-        animation: fadeIn 2s ease-in-out;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        max-height: 65vh;
+        object-fit: cover;
+        z-index: 2;
     }
 
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
+    /* ✅ logo no canto */
     .logo {
         position: fixed;
-        right: 20px;
-        bottom: 20px;
+        right: 22px;
+        bottom: 22px;
         width: 120px;
-        opacity: 0.9;
+        z-index: 5;
     }
 </style>
 </head>
@@ -127,18 +126,18 @@
 
 <div class="overlay"></div>
 
+<img src="animais.png" class="animais" alt="Animais SIRA Tech">
+
 <div class="container">
+
     <h1>SIRA-TECH</h1>
     <p class="sub-frase">Inovação que conecta o campo ao futuro.</p>
-
     <div class="line"></div>
     <h2>Sistema Integrado de Rastreamento Agro</h2>
 
     <a href="https://siratechbrasil.com.br" target="_blank"><button class="btn">🌐 Site Oficial</button></a>
     <a href="https://sira-tech.base44.app" target="_blank"><button class="btn">📱 Acessar App Web</button></a>
     <a href="https://github.com/hernandessilva11-hue/SIRA-TECH-" target="_blank"><button class="btn">💻 Código do Projeto (GitHub)</button></a>
-
-    <img src="animais.png" class="animais" alt="Animais SIRA Tech">
 </div>
 
 <img src="logo.png" class="logo" alt="Logo">
