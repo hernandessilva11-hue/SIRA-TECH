@@ -1,104 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>SIRA TECH - Official Links</title>
 
-<!-- GOOGLE FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-    body {
-        margin: 0;
-        font-family: "Montserrat", sans-serif;
-        background: linear-gradient(135deg, #000000 0%, #003314 100%);
-        color: #00ff9d;
-        text-align: center;
-        padding: 40px 20px;
-        animation: fadeIn 1.4s ease;
-    }
+  :root{
+    --neon: #00ff9d;
+    --bg1: #000;
+    --bg2: #00220f;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:"Montserrat",sans-serif;
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(0,255,157,0.03), transparent),
+                linear-gradient(135deg,var(--bg1) 0%, var(--bg2) 100%);
+    color:var(--neon);
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 18px;
+    -webkit-font-smoothing:antialiased;
+    animation:fadeIn .9s ease both;
+  }
+  @keyframes fadeIn{from{opacity:0; transform:translateY(18px)} to{opacity:1; transform:none}}
 
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to   { opacity: 1; transform: translateY(0); }
-    }
+  .card{
+    width:100%;
+    max-width:660px;
+    background: rgba(0,0,0,0.28);
+    border: 1px solid rgba(0,255,157,0.08);
+    padding:34px;
+    border-radius:18px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6), 0 0 30px rgba(0,255,157,0.03) inset;
+    text-align:center;
+  }
 
-    .logo {
-        width: 180px;
-        margin-bottom: 25px;
-        filter: drop-shadow(0px 0px 12px #00ff9d);
-    }
+  .logo{ width:170px; height:auto; margin:0 auto 18px; display:block; filter: drop-shadow(0 0 14px rgba(0,255,157,0.12)); }
 
-    h1 {
-        font-size: 34px;
-        margin: 0;
-        font-weight: 600;
-        color: #00ff9d;
-    }
+  h1{ margin:4px 0 6px; font-size:30px; font-weight:700; color:var(--neon) }
+  p.lead{ margin:0 0 18px; opacity:.9; font-size:15px }
 
-    p {
-        margin-top: 6px;
-        opacity: .85;
-        font-size: 17px;
-    }
+  .links{ display:flex; flex-direction:column; gap:12px; margin-top:10px; align-items:stretch; }
+  .link-btn{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    justify-content:center;
+    padding:14px 18px;
+    border-radius:12px;
+    font-weight:600;
+    font-size:17px;
+    text-decoration:none;
+    color:var(--neon);
+    background: linear-gradient(180deg, rgba(0,255,157,0.03), rgba(0,255,157,0.01));
+    border: 1px solid rgba(0,255,157,0.12);
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;
+  }
+  .link-btn:hover{
+    transform: translat
 
-    .container {
-        max-width: 520px;
-        margin: auto;
-    }
-
-    .link-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        background: rgba(0, 255, 157, 0.08);
-        border: 2px solid #00ff9d;
-        padding: 16px 20px;
-        margin: 14px 0;
-        border-radius: 14px;
-        font-size: 19px;
-        color: #00ff9d;
-        text-decoration: none;
-        font-weight: 600;
-        transition: .25s ease;
-    }
-
-    .link-btn:hover {
-        background: #00ff9d;
-        color: #000;
-        transform: translateY(-4px) scale(1.03);
-        box-shadow: 0 0 14px #00ff9d;
-    }
-
-    footer {
-        margin-top: 36px;
-        font-size: 14px;
-        opacity: .6;
-    }
-</style>
-</head>
-<body>
-
-<div class="container">
-
-    <img class="logo" src="logo.png" alt="SIRA TECH Logo">
-
-    <h1>SIRA TECH</h1>
-    <p>Sistema Integrado de Rastreamento Agro</p>
-
-    <a class="link-btn" href="https://siratechbrasil.com.br" target="_blank">🌐 Site Oficial</a>
-    <a class="link-btn" href="https://sira-tech.base44.app" target="_blank">📱 App Web (Base44)</a>
-    <a class="link-btn" href="https://youtube.com/shorts/RUnC9N1su0M?si=vtbfXjVv3_pjnzQ3" target="_blank">🎥 Pitch (YouTube)</a>
-    <a class="link-btn" href="https://youtu.be/X_E9SRV42gM?si=X--RHZ0LGW-NMFwv" target="_blank">📹 Apresentação Curricularização</a>
-    <a class="link-btn" href="https://1drv.ms/b/c/ed7b03ce68bbb46d/EfkTbXJGc35LmtFz5ZnpcT0BEUPQiDf767mL6pv1Yfvxsg?e=O5YjtT" target="_blank">📄 Documentação (PDF)</a>
-    <a class="link-btn" href="https://trello.com/b/vdUJO6gw/upx-usina-de-projetos-experimentais-i" target="_blank">🗂️ Quadro Trello</a>
-
-</div>
-
-<footer>© 2025 — SIRA TECH | Tecnologia, Sustentabilidade e Inovação</footer>
-
-</body>
-</html>
 
