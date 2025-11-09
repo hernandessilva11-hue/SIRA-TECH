@@ -1,106 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>SIRA TECH - Links Oficiais</title>
 
 <style>
-    body {
+    * {
         margin: 0;
+        padding: 0;
+        box-sizing: border-box;
         font-family: Arial, sans-serif;
+    }
+
+    body {
         background: radial-gradient(circle at center, #003a2a, #00140f);
-        color: #e6fff7;
         text-align: center;
+        color: #e6fff7;
     }
 
-    h1 {
-        margin-top: 15px;
-        font-size: 36px;
-        color: #00ffbf;
-        text-shadow: 0 0 15px #00ffbf;
-    }
-
+    /* LOGO */
     .logo {
         width: 160px;
         margin-top: 40px;
-        filter: drop-shadow(0 0 8px #00ffbf);
+        filter: drop-shadow(0 0 12px #00ffbf);
     }
 
+    /* TÍTULO NEON PREMIUM */
+    h1 {
+        margin-top: 18px;
+        font-size: 52px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+
+        background: linear-gradient(90deg, #00ffc3, #00ff9d, #00ffc3);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        text-shadow:
+            0 0 10px #00ffbf,
+            0 0 22px #00ffbf,
+            0 0 35px rgba(0, 255, 191, 0.9),
+            0 0 55px rgba(0, 255, 191, 0.7);
+        animation: pulseGlow 2.8s infinite alternate ease-in-out;
+    }
+
+    @keyframes pulseGlow {
+        0% { text-shadow: 0 0 8px #00ffbf, 0 0 18px #00ffbf, 0 0 30px rgba(0,255,191,0.8);}
+        100% { text-shadow: 0 0 16px #00ffbf, 0 0 35px rgba(0,255,191,1), 0 0 65px rgba(0,255,191,0.9);}
+    }
+
+    .subtitle {
+        margin-top: 5px;
+        font-size: 17px;
+        opacity: .90;
+    }
+
+    /* LISTA DE BOTÕES */
     .links {
         margin-top: 25px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 12px;
+        gap: 14px;
     }
 
     .link {
-        display: block;
-        text-decoration: none;
         background: #00ffbf;
-        width: 260px;
         padding: 18px;
+        width: 285px;
+        border-radius: 16px;
+        text-decoration: none;
         color: #003a2a;
-        border-radius: 14px;
-        font-size: 18px;
         font-weight: bold;
-        transition: 0.25s;
-        box-shadow: 0 0 15px #00ffbf;
+        font-size: 18px;
+        box-shadow: 0 0 18px #00ffbf;
+        transition: .22s;
     }
 
     .link:hover {
         transform: scale(1.05);
-        box-shadow: 0px 0px 25px #00ffbf;
+        box-shadow: 0 0 28px #00ffbf;
     }
 
     footer {
-        margin-top: 60px;
-        margin-bottom: 25px;
-        color: #00ffbf;
-        opacity: 0.7;
+        margin-top: 65px;
+        margin-bottom: 30px;
         font-size: 14px;
+        color: #00ffbf;
+        opacity: .75;
     }
 </style>
 </head>
 
 <body>
 
-    <img src="logo.png" class="logo">
+    <img src="logo.png" class="logo" />
 
     <h1>SIRA TECH</h1>
-    <p>Sistema Integrado de Rastreamento Agro</p>
+    <p class="subtitle">Sistema Integrado de Rastreamento Agro</p>
 
     <div class="links">
 
-        <a class="link" href="https://siratechbrasil.com.br/" target="_blank">
-            🌐 Site Oficial
-        </a>
+        <a class="link" href="https://siratechbrasil.com.br/" target="_blank">🌐 Site Oficial</a>
 
-        <a class="link" href="https://sira-tech.base44.app" target="_blank">
-            📱 App Web (Base44)
-        </a>
+        <a class="link" href="https://sira-tech.base44.app" target="_blank">📱 App Web (Base44)</a>
 
-        <!-- ✅ AQUI ESTÁ O NOVO BOTÃO NO MESMO VISUAL -->
-        <a class="link" href="https://hernandessilva11-hue.github.io/SIRA-TECH/" target="_blank">
-            🚀 Versão Web (GitHub)
-        </a>
+        <a class="link" href="https://hernandessilva11-hue.github.io/SIRA-TECH/" target="_blank">🚀 Versão Web (GitHub)</a>
 
-        <a class="link" href="https://youtu.be/X_E9SRV42gM" target="_blank">
-            🎥 Vídeo Curricularização
-        </a>
+        <a class="link" href="https://youtu.be/X_E9SRV42gM" target="_blank">🎥 Vídeo Curricularização</a>
 
-        <a class="link" href="https://youtube.com/shorts/RUnC9N1su0M" target="_blank">
-            🚀 Pitch / Apresentação
-        </a>
+        <a class="link" href="https://youtube.com/shorts/RUnC9N1su0M" target="_blank">🚀 Pitch / Apresentação</a>
 
-        <a class="link" href="https://trello.com" target="_blank">
-            📌 Quadro Trello
-        </a>
+        <a class="link" href="https://trello.com" target="_blank">📌 Quadro Trello</a>
 
-        <a class="link" href="#" target="_blank">
-            📄 PDF da Documentação
-        </a>
+        <a class="link" href="#" target="_blank">📄 PDF da Documentação</a>
 
     </div>
 
@@ -108,3 +123,4 @@
 
 </body>
 </html>
+
