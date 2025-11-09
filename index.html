@@ -1,146 +1,131 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SIRA TECH - Links Oficiais</title>
-
-<!-- Fonte -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SIRA-TECH - Plataforma Oficial</title>
 
 <style>
-    /* ======== Estilos Gerais ======== */
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        scroll-behavior: smooth;
+        font-family: "Arial", sans-serif;
     }
 
     body {
-        font-family: 'Poppins', sans-serif;
-        background: url("fundo-sira.png") center/cover fixed no-repeat;
-        color: #eafffb;
+        background: url("fundo-sira.png") no-repeat center center fixed;
+        background-size: cover;
+        height: 100vh;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
     }
 
-    /* ======== Efeito de overlay + blur ======== */
-    body::before {
-        content: "";
+    .overlay {
         position: fixed;
         width: 100%;
         height: 100%;
-        top: 0; left: 0;
-        background: rgba(0, 20, 15, 0.65);
-        backdrop-filter: blur(5px);
-        z-index: -1;
+        background: rgba(0, 0, 0, .55); /* leve escurecimento para destacar textos/botões */
+        top: 0;
+        left: 0;
+        z-index: 1;
     }
 
-    /* ======== Container Central ======== */
     .container {
+        position: relative;
+        z-index: 2;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-        padding: 50px 20px;
-    }
-
-    /* ======== LOGO COM ANIMAÇÃO ======== */
-    .logo {
-        width: 140px;
-        margin-bottom: 15px;
-        animation: pulse 2.2s infinite alternate ease-in-out;
-        filter: drop-shadow(0 0 20px #19ffb4);
-    }
-
-    @keyframes pulse {
-        from { transform: scale(1); filter: drop-shadow(0 0 10px #19ffb4); }
-        to   { transform: scale(1.08); filter: drop-shadow(0 0 25px #19ffb4); }
-    }
-
-    /* ======== TÍTULO ======== */
-    h1 {
-        font-size: 60px;
-        color: #19ffb4;
-        font-weight: 800;
-        text-shadow: 0 0 35px #19ffb4;
-        animation: glow 1.5s alternate infinite ease-in-out;
-    }
-
-    @keyframes glow {
-        from { text-shadow: 0 0 20px #19ffb4, 0 0 35px #19ffb4; }
-        to   { text-shadow: 0 0 40px #19ffb4, 0 0 70px #19ffb4; }
-    }
-
-    /* Subtítulo com linha */
-    h2 {
-        font-size: 30px;
-        margin-top: 5px;
-        letter-spacing: 2px;
-        font-weight: 600;
-        color: #b0ffe8;
-        text-shadow: 0 0 18px #19ffb4;
-    }
-
-    .line {
-        width: 300px;
-        height: 3px;
-        background: #19ffb4;
-        margin: 15px auto;
-        box-shadow: 0 0 15px #19ffb4;
-    }
-
-    /* ======== BOTÕES ======== */
-    .btn {
-        display: block;
-        width: 350px;
         padding: 20px;
-        margin: 18px auto;
-        font-size: 23px;
-        background: #19ffb4;
-        color: #003322;
-        font-weight: 700;
+    }
+
+    /* TÍTULO SIRA-TECH */
+    h1 {
+        font-size: 110px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        color: #00ffae;
+        text-shadow:
+            0 0 20px #00ffae,
+            0 0 40px #00ffae,
+            0 0 80px #00ffae;
+        margin-bottom: 5px;
+    }
+
+    /* FRASE INSTITUCIONAL */
+    .sub {
+        font-size: 38px;
+        font-weight: 600;
+        color: white;
+        text-shadow: 0 0 15px rgba(0,255,180,0.8);
+        margin-bottom: 35px;
+    }
+
+    .btn {
+        width: 85%;
+        max-width: 500px;
+        background-color: #00ffae;
+        border: none;
+        padding: 22px;
+        margin: 14px;
         border-radius: 14px;
-        text-decoration: none;
-        transition: 0.35s;
-        box-shadow: 0 0 20px #19ffb4;
-        transform: translateY(0px);
+        font-size: 28px;
+        font-weight: bold;
+        color: #003b1f;
+        cursor: pointer;
+        transition: .2s;
+        text-transform: uppercase;
+        box-shadow: 0 0 18px #00ffae;
     }
 
     .btn:hover {
-        transform: scale(1.07) translateY(-3px);
-        box-shadow: 0 0 45px #19ffb4;
+        transform: scale(1.07);
+        box-shadow: 0 0 30px #00ffae;
     }
 
-    footer {
-        margin-top: 40px;
-        opacity: 0.8;
-        font-size: 14px;
+    /* LOGO NO CANTO INFERIOR DIREITO */
+    .logo {
+        position: fixed;
+        right: 25px;
+        bottom: 25px;
+        width: 120px;
+        z-index: 3;
+        opacity: .95;
     }
+
 </style>
-
 </head>
+
 <body>
 
+<div class="overlay"></div>
+
 <div class="container">
+    
+    <h1>SIRA-TECH</h1>
+    <p class="sub">Inovação que conecta o campo ao futuro.</p>
 
-    <!-- LOGO ANIMADO -->
-    <img src="logo.png" class="logo" alt="Logo SIRA TECH">
+    <!-- BOTÕES -->
+    <a href="https://siratechbrasil.com.br" target="_blank">
+        <button class="btn">🌐 Site Oficial</button>
+    </a>
 
-    <h1>SIRA TECH</h1>
-    <div class="line"></div>
-    <h2>SISTEMA INTEGRADO DE RASTREAMENTO AGRO</h2>
+    <a href="https://sira-tech.base44.app" target="_blank">
+        <button class="btn">📱 Acessar App Web</button>
+    </a>
 
-    <a class="btn" href="https://siratechbrasil.com.br" target="_blank">🌐 Site Oficial</a>
-    <a class="btn" href="https://sira-tech.base44.app" target="_blank">📱 App Web (Base44)</a>
-    <a class="btn" href="https://hernandessilva11-hue.github.io/SIRA-TECH-/" target="_blank">🚀 Versão Web (GitHub)</a>
-    <a class="btn" href="https://youtu.be/X_E9SRV42gM" target="_blank">🎥 Vídeo Curricularização</a>
-    <a class="btn" href="https://youtube.com/shorts/RUnC9N1su0M" target="_blank">🚀 Pitch / Apresentação</a>
-    <a class="btn" href="https://trello.com" target="_blank">📌 Quadro Trello</a>
-    <a class="btn" href="https://drive.google.com" target="_blank">📄 PDF da Documentação</a>
+    <a href="https://github.com/hernandessilva11-hue/SIRA-TECH-" target="_blank">
+        <button class="btn">💻 Código do Projeto (GitHub)</button>
+    </a>
 
-    <footer>
-        © 2025 — SIRA TECH
-    </footer>
 </div>
+
+<img src="logo.png" class="logo" alt="Logo SIRA TECH">
 
 </body>
 </html>
-
-
