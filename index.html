@@ -9,94 +9,102 @@
     body {
         margin: 0;
         font-family: Arial, sans-serif;
-        color: #00ff9d;
+        background: radial-gradient(circle at center, #003a2a, #00140f);
+        color: #e6fff7;
         text-align: center;
-        padding: 40px 20px;
-
-        /* FUNDO ANIMADO — OPÇÃO C */
-        background: linear-gradient(135deg, #001d12 0%, #003a28 50%, #000000 100%);
-        animation: pulse 6s infinite alternate;
-    }
-
-    @keyframes pulse {
-      from { filter: brightness(0.85); }
-      to   { filter: brightness(1.25); }
-    }
-
-    img.logo {
-        width: 165px;
-        margin-bottom: 25px;
-        filter: drop-shadow(0 0 12px #00ff9d);
-        border-radius: 10px;
     }
 
     h1 {
-        margin: 0;
-        font-size: 34px;
-        font-weight: bold;
-        color: #00ff9d;
-        text-shadow: 0 0 10px #00ff9d;
+        margin-top: 15px;
+        font-size: 36px;
+        color: #00ffbf;
+        text-shadow: 0 0 15px #00ffbf;
     }
 
-    p {
-        margin-top: 6px;
-        font-size: 16px;
-        opacity: 0.9;
+    .logo {
+        width: 160px;
+        margin-top: 40px;
+        filter: drop-shadow(0 0 8px #00ffbf);
     }
 
     .links {
-        margin-top: 30px;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
     }
 
-    .btn {
+    .link {
         display: block;
-        width: 90%;
-        max-width: 380px;
-        margin: 12px auto;
-        padding: 16px;
+        text-decoration: none;
+        background: #00ffbf;
+        width: 260px;
+        padding: 18px;
+        color: #003a2a;
+        border-radius: 14px;
         font-size: 18px;
         font-weight: bold;
-        text-decoration: none;
-        border-radius: 14px;
-        color: #000;
-        background: #00ff9d;
-        transition: .25s;
-        box-shadow: 0 0 12px #00ff9d80;
+        transition: 0.25s;
+        box-shadow: 0 0 15px #00ffbf;
     }
 
-    .btn:hover {
-        opacity: 0.9;
+    .link:hover {
         transform: scale(1.05);
-        box-shadow: 0 0 20px #00ff9d;
+        box-shadow: 0px 0px 25px #00ffbf;
     }
 
     footer {
-        margin-top: 40px;
-        font-size: 12px;
-        opacity: 0.6;
+        margin-top: 60px;
+        margin-bottom: 25px;
+        color: #00ffbf;
+        opacity: 0.7;
+        font-size: 14px;
     }
 </style>
 </head>
+
 <body>
 
-<img src="logo.png" class="logo" alt="SIRA TECH Logo">
+    <img src="logo.png" class="logo">
 
-<h1>SIRA TECH</h1>
-<p>Sistema Integrado de Rastreamento Agro</p>
+    <h1>SIRA TECH</h1>
+    <p>Sistema Integrado de Rastreamento Agro</p>
 
-<div class="links">
+    <div class="links">
 
-    <a class="btn" href="https://siratechbrasil.com.br" target="_blank">🌐 Site Oficial</a>
-    <a class="btn" href="https://sira-tech.base44.app" target="_blank">📱 App Web (Base44)</a>
-    <a class="link-button" href="https://hernandessilva11-hue.github.io/SIRA-TECH/" target="_blank">🚀 App hospedado no GitHub</a>
-    <a class="btn" href="https://youtu.be/X_E9SRV42gM?si=X--RHZ0LGW-NMFwv" target="_blank">🎥 Vídeo Curricularização</a>
-    <a class="btn" href="https://youtube.com/shorts/RUnC9N1su0M?si=vtbfXjVv3_pjnzQ3" target="_blank">🚀 Pitch / Apresentação</a>
-    <a class="btn" href="https://trello.com/b/vdUJO6gw/upx-usina-de-projetos-experimentais-i" target="_blank">📌 Quadro Trello</a>
-    <a class="btn" href="https://1drv.ms/b/c/ed7b03ce68bbb46d/EfkTbXJGc35LmtFz5ZnpcT0BEUPQiDf767mL6pv1Yfvxsg?e=O5YjtT" target="_blank">📄 PDF da Documentação</a>
+        <a class="link" href="https://siratechbrasil.com.br/" target="_blank">
+            🌐 Site Oficial
+        </a>
 
-</div>
+        <a class="link" href="https://sira-tech.base44.app" target="_blank">
+            📱 App Web (Base44)
+        </a>
 
-<footer>© 2025 — SIRA TECH</footer>
+        <!-- ✅ AQUI ESTÁ O NOVO BOTÃO NO MESMO VISUAL -->
+        <a class="link" href="https://hernandessilva11-hue.github.io/SIRA-TECH/" target="_blank">
+            🚀 Versão Web (GitHub)
+        </a>
+
+        <a class="link" href="https://youtu.be/X_E9SRV42gM" target="_blank">
+            🎥 Vídeo Curricularização
+        </a>
+
+        <a class="link" href="https://youtube.com/shorts/RUnC9N1su0M" target="_blank">
+            🚀 Pitch / Apresentação
+        </a>
+
+        <a class="link" href="https://trello.com" target="_blank">
+            📌 Quadro Trello
+        </a>
+
+        <a class="link" href="#" target="_blank">
+            📄 PDF da Documentação
+        </a>
+
+    </div>
+
+    <footer>© 2025 — SIRA TECH</footer>
 
 </body>
 </html>
