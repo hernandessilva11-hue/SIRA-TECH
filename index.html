@@ -7,7 +7,7 @@
 
 <style>
 
-/* Fonte clean e moderna */
+/* Fonte moderna */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
 
 html {
@@ -19,36 +19,45 @@ body {
     font-family: "Poppins", sans-serif;
     color: #fff;
     text-align: center;
-    background: url("fundo-sira.png") no-repeat center center/cover;
+
+    /* ✅ FUNDO COM IMAGEM, DESLOCADA PARA BAIXO */
+    background: url("fundo-sira.png") no-repeat center top;
+    background-size: cover;
+    background-position-y: 140px; /* desce a imagem para aparecer mais */
 }
 
-/* LOGOS NOS CANTOS SUPERIORES */
-.logo-left, .logo-right {
+/* ✅ FAIXA SUPERIOR COM LOGO */
+.header-banner {
+    width: 100%;
+    height: 120px;
+    background: rgba(0, 20, 10, 0.75);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
-    top: 15px;
-    z-index: 999;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 0 18px rgba(0,255,170,0.9);
 }
 
-.logo-left img, .logo-right img {
-    width: 90px;
-    filter: drop-shadow(0 0 10px rgba(0, 255, 170, 0.8));
-    transition: transform 0.3s ease-in-out;
+/* LOGO CENTRAL NA FAIXA */
+.header-banner img {
+    height: 85px;
+    filter: drop-shadow(0 0 18px #19ffb4);
+    transition: 0.3s;
 }
 
-.logo-left img:hover, .logo-right img:hover {
-    transform: scale(1.12);
+.header-banner img:hover {
+    transform: scale(1.08);
 }
 
-.logo-left { left: 20px; }
-.logo-right { right: 20px; }
-
-/* CONTAINER PRINCIPAL */
+/* TÍTULO */
 .container {
-    padding-top: 150px;
+    padding-top: 200px; /* compensa faixa fixa */
     padding-bottom: 60px;
 }
 
-/* TÍTULO NEON */
 h1 {
     font-size: 55px;
     letter-spacing: 4px;
@@ -64,18 +73,14 @@ h2 {
     font-size: 26px;
     font-weight: 600;
     color: #90ffd5;
-    text-shadow: 0 0 8px rgba(0,255,170,0.7);
-    margin-top: -5px;
-    margin-bottom: 40px;
+    text-shadow: 0 0 10px rgba(0,255,170,0.7);
 }
 
-/* LINHA NEON */
 .line {
     width: 260px;
     height: 3px;
     background: linear-gradient(90deg, transparent, #00ff9d, transparent);
-    margin: auto;
-    margin-bottom: 25px;
+    margin: 15px auto 30px auto;
 }
 
 /* BOTÕES */
@@ -83,7 +88,7 @@ h2 {
     display: block;
     width: 340px;
     margin: 15px auto;
-    padding: 18px;
+    padding: 20px;
     border-radius: 25px;
     background-color: #00ffb3;
     color: #003321;
@@ -111,16 +116,12 @@ footer {
 </head>
 <body>
 
-<!-- LOGOS SUPERIORES -->
-<div class="logo-left">
-    <img src="SIRA-TECH logo.jpeg" alt="Logo SIRA TECH">
+<!-- ✅ FAIXA COM O LOGO NO TOPO -->
+<div class="header-banner">
+    <img src="logo.png" alt="Logo SIRA TECH">
 </div>
 
-<div class="logo-right">
-    <img src="SIRA-TECH logo.jpeg" alt="Logo SIRA TECH">
-</div>
-
-<!-- CONTEÚDO PRINCIPAL -->
+<!-- CONTEÚDO CENTRAL -->
 <div class="container">
 
     <h1>SIRA TECH</h1>
@@ -133,7 +134,7 @@ footer {
     <a class="button" href="https://youtu.be/X_E9SRV42gM" target="_blank">🎥 Vídeo Curricularização</a>
     <a class="button" href="https://youtube.com/shorts/RUnC9N1su0M" target="_blank">🚀 Pitch / Apresentação</a>
     <a class="button" href="https://trello.com" target="_blank">📌 Quadro Trello</a>
-    <a class="button" href="https://siratechbrasil.com.br/documentacao.pdf" target="_blank">📄 PDF da Documentação</a>
+    <a class="button" href="https://drive.google.com" target="_blank">📄 PDF da Documentação</a>
 
 </div>
 
