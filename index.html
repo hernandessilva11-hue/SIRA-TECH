@@ -5,92 +5,113 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SIRA TECH - Links Oficiais</title>
 
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
+<!-- Fonte -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
 
-    body {
+<style>
+    /* ======== Estilos Gerais ======== */
+    * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    body {
         font-family: 'Poppins', sans-serif;
-        background-image: url("fundo-sira.png");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+        background: url("fundo-sira.png") center/cover fixed no-repeat;
         color: #eafffb;
     }
 
-    /* camada escurecida com blur */
+    /* ======== Efeito de overlay + blur ======== */
     body::before {
         content: "";
         position: fixed;
-        top: 0; left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 20, 10, 0.78);
-        backdrop-filter: blur(3px);
+        top: 0; left: 0;
+        background: rgba(0, 20, 15, 0.65);
+        backdrop-filter: blur(5px);
         z-index: -1;
     }
 
+    /* ======== Container Central ======== */
     .container {
         text-align: center;
-        padding: 40px 20px;
+        padding: 50px 20px;
     }
 
+    /* ======== LOGO COM ANIMAÇÃO ======== */
+    .logo {
+        width: 140px;
+        margin-bottom: 15px;
+        animation: pulse 2.2s infinite alternate ease-in-out;
+        filter: drop-shadow(0 0 20px #19ffb4);
+    }
+
+    @keyframes pulse {
+        from { transform: scale(1); filter: drop-shadow(0 0 10px #19ffb4); }
+        to   { transform: scale(1.08); filter: drop-shadow(0 0 25px #19ffb4); }
+    }
+
+    /* ======== TÍTULO ======== */
     h1 {
-        font-size: 58px;
+        font-size: 60px;
         color: #19ffb4;
         font-weight: 800;
-        margin-bottom: 5px;
-        text-shadow: 0 0 25px #19ffb4;
-        animation: neon 1.5s infinite alternate;
+        text-shadow: 0 0 35px #19ffb4;
+        animation: glow 1.5s alternate infinite ease-in-out;
     }
 
-    @keyframes neon {
-        from { text-shadow: 0 0 10px #19ffb4, 0 0 30px #19ffb4; }
-        to   { text-shadow: 0 0 25px #19ffb4, 0 0 55px #19ffb4; }
+    @keyframes glow {
+        from { text-shadow: 0 0 20px #19ffb4, 0 0 35px #19ffb4; }
+        to   { text-shadow: 0 0 40px #19ffb4, 0 0 70px #19ffb4; }
     }
 
+    /* Subtítulo com linha */
     h2 {
-        font-size: 28px;
-        font-weight: 600;
-        color: #8affda;
-        margin-top: -10px;
-        text-shadow: 0 0 15px #19ffb4;
+        font-size: 30px;
+        margin-top: 5px;
         letter-spacing: 2px;
+        font-weight: 600;
+        color: #b0ffe8;
+        text-shadow: 0 0 18px #19ffb4;
     }
 
     .line {
-        width: 260px;
+        width: 300px;
         height: 3px;
         background: #19ffb4;
-        margin: 10px auto 25px auto;
+        margin: 15px auto;
         box-shadow: 0 0 15px #19ffb4;
     }
 
+    /* ======== BOTÕES ======== */
     .btn {
         display: block;
-        width: 330px;
+        width: 350px;
+        padding: 20px;
         margin: 18px auto;
-        padding: 18px;
-        font-size: 22px;
+        font-size: 23px;
         background: #19ffb4;
         color: #003322;
-        border-radius: 12px;
-        text-decoration: none;
         font-weight: 700;
-        transition: 0.3s;
+        border-radius: 14px;
+        text-decoration: none;
+        transition: 0.35s;
         box-shadow: 0 0 20px #19ffb4;
+        transform: translateY(0px);
     }
 
     .btn:hover {
-        transform: scale(1.04);
-        box-shadow: 0 0 35px #19ffb4;
+        transform: scale(1.07) translateY(-3px);
+        box-shadow: 0 0 45px #19ffb4;
     }
 
     footer {
         margin-top: 40px;
+        opacity: 0.8;
         font-size: 14px;
-        opacity: 0.75;
     }
 </style>
 
@@ -98,6 +119,9 @@
 <body>
 
 <div class="container">
+
+    <!-- LOGO ANIMADO -->
+    <img src="logo.png" class="logo" alt="Logo SIRA TECH">
 
     <h1>SIRA TECH</h1>
     <div class="line"></div>
@@ -111,9 +135,10 @@
     <a class="btn" href="https://trello.com" target="_blank">📌 Quadro Trello</a>
     <a class="btn" href="https://drive.google.com" target="_blank">📄 PDF da Documentação</a>
 
-    <footer>© 2025 — SIRA TECH</footer>
+    <footer>
+        © 2025 — SIRA TECH - DESENVOLVIDO POR THIAGO HERNANDES ANALISATE DE VIABILIDADE 
+    </footer>
 </div>
 
 </body>
 </html>
-
