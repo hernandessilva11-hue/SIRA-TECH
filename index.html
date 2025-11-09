@@ -1,37 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SIRA TECH - Links Oficiais</title>
-  <style>
-    body { font-family: Arial, sans-serif; background:#000; color:#00ff99; text-align:center; padding:40px; }
-    .container { max-width:720px; margin:0 auto; }
-    .logo { width:220px; height:auto; margin:0 auto 30px; display:block; }
-    h1 { font-size:34px; margin:0 0 6px; }
-    p.lead { margin:0 0 20px; opacity:0.9; }
-    h2 { margin-top:30px; }
-    .links a { color:#00ff99; text-decoration:none; font-size:20px; display:block; padding:12px 0; margin:8px 0; border-radius:8px; }
-    footer { margin-top:30px; opacity:0.85; font-size:14px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIRA TECH - Official Links</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        background: linear-gradient(135deg, #000000 0%, #003314 100%);
+        color: #00ff9d;
+        text-align: center;
+        padding: 40px 20px;
+        animation: fadeIn 1.4s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+        width: 180px;
+        margin-bottom: 25px;
+        filter: drop-shadow(0px 0px 12px #00ff9d);
+    }
+
+    h1 {
+        font-size: 34px;
+        margin: 0;
+        font-weight: 600;
+        color: #00ff9d;
+    }
+
+    p {
+        margin-top: 6px;
+        opacity: .85;
+        font-size: 17px;
+    }
+
+    .container {
+        max-width: 520px;
+        margin: auto;
+    }
+
+    .link-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: rgba(0, 255, 157, 0.08);
+        border: 2px solid #00ff9d;
+        padding: 16px 20px;
+        margin: 14px 0;
+        border-radius: 14px;
+        font-size: 19px;
+        color: #00ff9d;
+        text-decoration: none;
+        font-weight: 600;
+        transition: .25s ease;
+    }
+
+    .link-btn:hover {
+        background: #00ff9d;
+        color: #000;
+        transform: translateY(-4px) scale(1.03);
+        box-shadow: 0 0 14px #00ff9d;
+    }
+
+    footer {
+        margin-top: 36px;
+        font-size: 14px;
+        opacity: .6;
+    }
+</style>
 </head>
 <body>
-  <div class="container">
-    <!-- Usar caminho relativo: arquivo logo.png deve estar na raiz do repositório -->
-    <img class="logo" src="logo.png" alt="SIRA Tech Logo">
 
-    <h1>🌱 SIRA TECH</h1>
-    <p class="lead">Sistema Integrado de Rastreamento Agro</p>
+<div class="container">
 
-    <h2>Links Oficiais</h2>
-    <div class="links">
-      <a href="https://sira-techbrasil.com.br" target="_blank">🌐 Site Oficial</a>
-      <a href="https://seu-link-do-app-aqui" target="_blank">📱 Aplicativo (Base44)</a>
-      <a href="https://instagram.com/seu_instagram" target="_blank">📸 Instagram</a>
-      <a href="https://wa.me/55XXXXXXXXXX" target="_blank">💬 WhatsApp</a>
-    </div>
+    <img class="logo" src="logo.png" alt="SIRA TECH Logo">
 
-    <footer>© 2025 — SIRA TECH</footer>
-  </div>
+    <h1>SIRA TECH</h1>
+    <p>Sistema Integrado de Rastreamento Agro</p>
+
+    <a class="link-btn" href="https://siratechbrasil.com.br" target="_blank">🌐 Site Oficial</a>
+    <a class="link-btn" href="https://sira-tech.base44.app" target="_blank">📱 App Web (Base44)</a>
+    <a class="link-btn" href="https://youtube.com/shorts/RUnC9N1su0M?si=vtbfXjVv3_pjnzQ3" target="_blank">🎥 Pitch (YouTube)</a>
+    <a class="link-btn" href="https://youtu.be/X_E9SRV42gM?si=X--RHZ0LGW-NMFwv" target="_blank">📹 Apresentação Curricularização</a>
+    <a class="link-btn" href="https://1drv.ms/b/c/ed7b03ce68bbb46d/EfkTbXJGc35LmtFz5ZnpcT0BEUPQiDf767mL6pv1Yfvxsg?e=O5YjtT" target="_blank">📄 Documentação (PDF)</a>
+    <a class="link-btn" href="https://trello.com/b/vdUJO6gw/upx-usina-de-projetos-experimentais-i" target="_blank">🗂️ Quadro Trello</a>
+
+</div>
+
+<footer>© 2025 — SIRA TECH | Tecnologia, Sustentabilidade e Inovação</footer>
+
 </body>
 </html>
+
