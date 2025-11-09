@@ -13,23 +13,44 @@
         font-family: Arial, sans-serif;
     }
 
+    /* ✅ FUNDO COM A IMAGEM */
     body {
-        background: radial-gradient(circle at center, #003a2a, #00140f);
-        text-align: center;
+        margin: 0;
+        font-family: Arial, sans-serif;
         color: #e6fff7;
+        text-align: center;
+
+        background-image: url("fundo-sira.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        backdrop-filter: blur(3px);
     }
 
-    /* LOGO */
+    /* ✅ ESCURECE LEVEMENTE O FUNDO PARA DESTACAR O NEON */
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 20, 15, 0.60); /* intensidade do escuro */
+        z-index: -1;
+    }
+
+    /* ✅ LOGO */
     .logo {
-        width: 160px;
+        width: 170px;
         margin-top: 40px;
-        filter: drop-shadow(0 0 12px #00ffbf);
+        filter: drop-shadow(0 0 14px #00ffbf);
     }
 
-    /* TÍTULO NEON PREMIUM */
+    /* ✅ TÍTULO PRINCIPAL */
     h1 {
         margin-top: 18px;
-        font-size: 52px;
+        font-size: 56px;
         font-weight: 900;
         text-transform: uppercase;
         letter-spacing: 4px;
@@ -39,58 +60,74 @@
         -webkit-text-fill-color: transparent;
 
         text-shadow:
-            0 0 10px #00ffbf,
-            0 0 22px #00ffbf,
-            0 0 35px rgba(0, 255, 191, 0.9),
-            0 0 55px rgba(0, 255, 191, 0.7);
+            0 0 14px #00ffbf,
+            0 0 30px rgba(0, 255, 191, 0.9),
+            0 0 60px rgba(0, 255, 191, 0.7);
+
         animation: pulseGlow 2.8s infinite alternate ease-in-out;
     }
 
     @keyframes pulseGlow {
-        0% { text-shadow: 0 0 8px #00ffbf, 0 0 18px #00ffbf, 0 0 30px rgba(0,255,191,0.8);}
-        100% { text-shadow: 0 0 16px #00ffbf, 0 0 35px rgba(0,255,191,1), 0 0 65px rgba(0,255,191,0.9);}
+        0% { text-shadow: 0 0 10px #00ffbf, 0 0 25px #00ffbf, 0 0 40px rgba(0,255,191,0.8);}
+        100% { text-shadow: 0 0 18px #00ffbf, 0 0 50px rgba(0,255,191,1), 0 0 80px rgba(0,255,191,0.9);}
     }
 
+    /* ✅ LINHA LUMINOSA */
+    .divider {
+        width: 300px;
+        height: 3px;
+        background: #00ffbf;
+        margin: 10px auto 14px auto;
+        box-shadow: 0 0 14px #00ffbf, 0 0 26px rgba(0, 255, 191, .7);
+        border-radius: 2px;
+    }
+
+    /* ✅ SUBTÍTULO */
     .subtitle {
-        margin-top: 5px;
-        font-size: 17px;
-        opacity: .90;
+        font-size: 25px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #7CFFB2;
+        text-shadow: 0 0 6px #7CFFB2, 0 0 18px rgba(124, 255, 178, 0.8);
+        letter-spacing: 1.7px;
+        margin-bottom: 18px;
     }
 
-    /* LISTA DE BOTÕES */
+    /* ✅ BOTÕES */
     .links {
         margin-top: 25px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 14px;
+        gap: 18px;
     }
 
     .link {
         background: #00ffbf;
-        padding: 18px;
-        width: 285px;
-        border-radius: 16px;
+        padding: 22px;
+        width: 300px;
+        border-radius: 18px;
         text-decoration: none;
         color: #003a2a;
         font-weight: bold;
-        font-size: 18px;
-        box-shadow: 0 0 18px #00ffbf;
+        font-size: 20px;
+        box-shadow: 0 0 22px #00ffbf;
         transition: .22s;
     }
 
     .link:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 28px #00ffbf;
+        transform: scale(1.08);
+        box-shadow: 0 0 40px #00ffbf;
     }
 
     footer {
-        margin-top: 65px;
-        margin-bottom: 30px;
+        margin-top: 60px;
+        margin-bottom: 26px;
         font-size: 14px;
         color: #00ffbf;
         opacity: .75;
     }
+
 </style>
 </head>
 
@@ -99,22 +136,19 @@
     <img src="logo.png" class="logo" />
 
     <h1>SIRA TECH</h1>
+
+    <div class="divider"></div>
+
     <p class="subtitle">Sistema Integrado de Rastreamento Agro</p>
 
     <div class="links">
 
         <a class="link" href="https://siratechbrasil.com.br/" target="_blank">🌐 Site Oficial</a>
-
         <a class="link" href="https://sira-tech.base44.app" target="_blank">📱 App Web (Base44)</a>
-
         <a class="link" href="https://hernandessilva11-hue.github.io/SIRA-TECH/" target="_blank">🚀 Versão Web (GitHub)</a>
-
         <a class="link" href="https://youtu.be/X_E9SRV42gM" target="_blank">🎥 Vídeo Curricularização</a>
-
         <a class="link" href="https://youtube.com/shorts/RUnC9N1su0M" target="_blank">🚀 Pitch / Apresentação</a>
-
         <a class="link" href="https://trello.com" target="_blank">📌 Quadro Trello</a>
-
         <a class="link" href="#" target="_blank">📄 PDF da Documentação</a>
 
     </div>
@@ -123,4 +157,5 @@
 
 </body>
 </html>
+
 
