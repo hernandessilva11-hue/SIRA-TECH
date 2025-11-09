@@ -1,144 +1,146 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SIRA TECH - Links Oficiais</title>
 
-<!-- Fonte -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
-
 <style>
-    /* ======== Estilos Gerais ======== */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        scroll-behavior: smooth;
-    }
 
-    body {
-        font-family: 'Poppins', sans-serif;
-        background: url("fundo-sira.png") center/cover fixed no-repeat;
-        color: #eafffb;
-    }
+/* Fonte clean e moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
 
-    /* ======== Efeito de overlay + blur ======== */
-    body::before {
-        content: "";
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        top: 0; left: 0;
-        background: rgba(0, 20, 15, 0.65);
-        backdrop-filter: blur(5px);
-        z-index: -1;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    /* ======== Container Central ======== */
-    .container {
-        text-align: center;
-        padding: 50px 20px;
-    }
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    text-align: center;
+    background: url("fundo-sira.png") no-repeat center center/cover;
+}
 
-    /* ======== LOGO COM ANIMAÇÃO ======== */
-    .logo {
-        width: 140px;
-        margin-bottom: 15px;
-        animation: pulse 2.2s infinite alternate ease-in-out;
-        filter: drop-shadow(0 0 20px #19ffb4);
-    }
+/* LOGOS NOS CANTOS SUPERIORES */
+.logo-left, .logo-right {
+    position: fixed;
+    top: 15px;
+    z-index: 999;
+}
 
-    @keyframes pulse {
-        from { transform: scale(1); filter: drop-shadow(0 0 10px #19ffb4); }
-        to   { transform: scale(1.08); filter: drop-shadow(0 0 25px #19ffb4); }
-    }
+.logo-left img, .logo-right img {
+    width: 90px;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 170, 0.8));
+    transition: transform 0.3s ease-in-out;
+}
 
-    /* ======== TÍTULO ======== */
-    h1 {
-        font-size: 60px;
-        color: #19ffb4;
-        font-weight: 800;
-        text-shadow: 0 0 35px #19ffb4;
-        animation: glow 1.5s alternate infinite ease-in-out;
-    }
+.logo-left img:hover, .logo-right img:hover {
+    transform: scale(1.12);
+}
 
-    @keyframes glow {
-        from { text-shadow: 0 0 20px #19ffb4, 0 0 35px #19ffb4; }
-        to   { text-shadow: 0 0 40px #19ffb4, 0 0 70px #19ffb4; }
-    }
+.logo-left { left: 20px; }
+.logo-right { right: 20px; }
 
-    /* Subtítulo com linha */
-    h2 {
-        font-size: 30px;
-        margin-top: 5px;
-        letter-spacing: 2px;
-        font-weight: 600;
-        color: #b0ffe8;
-        text-shadow: 0 0 18px #19ffb4;
-    }
+/* CONTAINER PRINCIPAL */
+.container {
+    padding-top: 150px;
+    padding-bottom: 60px;
+}
 
-    .line {
-        width: 300px;
-        height: 3px;
-        background: #19ffb4;
-        margin: 15px auto;
-        box-shadow: 0 0 15px #19ffb4;
-    }
+/* TÍTULO NEON */
+h1 {
+    font-size: 55px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #32ffb3;
+    text-shadow: 0 0 12px #32ffb3, 0 0 25px #00ffaa;
+    margin-bottom: 5px;
+}
 
-    /* ======== BOTÕES ======== */
-    .btn {
-        display: block;
-        width: 350px;
-        padding: 20px;
-        margin: 18px auto;
-        font-size: 23px;
-        background: #19ffb4;
-        color: #003322;
-        font-weight: 700;
-        border-radius: 14px;
-        text-decoration: none;
-        transition: 0.35s;
-        box-shadow: 0 0 20px #19ffb4;
-        transform: translateY(0px);
-    }
+/* SUBTÍTULO */
+h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #90ffd5;
+    text-shadow: 0 0 8px rgba(0,255,170,0.7);
+    margin-top: -5px;
+    margin-bottom: 40px;
+}
 
-    .btn:hover {
-        transform: scale(1.07) translateY(-3px);
-        box-shadow: 0 0 45px #19ffb4;
-    }
+/* LINHA NEON */
+.line {
+    width: 260px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #00ff9d, transparent);
+    margin: auto;
+    margin-bottom: 25px;
+}
 
-    footer {
-        margin-top: 40px;
-        opacity: 0.8;
-        font-size: 14px;
-    }
+/* BOTÕES */
+.button {
+    display: block;
+    width: 340px;
+    margin: 15px auto;
+    padding: 18px;
+    border-radius: 25px;
+    background-color: #00ffb3;
+    color: #003321;
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0px 0px 15px rgba(0,255,170,0.8);
+}
+
+.button:hover {
+    transform: scale(1.07);
+    box-shadow: 0px 0px 25px rgba(0,255,170,1);
+}
+
+/* RODAPÉ */
+footer {
+    margin-top: 60px;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
 </style>
 
 </head>
 <body>
 
-<div class="container">
+<!-- LOGOS SUPERIORES -->
+<div class="logo-left">
+    <img src="SIRA-TECH logo.jpeg" alt="Logo SIRA TECH">
+</div>
 
-    <!-- LOGO ANIMADO -->
-    <img src="logo.png" class="logo" alt="Logo SIRA TECH">
+<div class="logo-right">
+    <img src="SIRA-TECH logo.jpeg" alt="Logo SIRA TECH">
+</div>
+
+<!-- CONTEÚDO PRINCIPAL -->
+<div class="container">
 
     <h1>SIRA TECH</h1>
     <div class="line"></div>
-    <h2>SISTEMA INTEGRADO DE RASTREAMENTO AGRO</h2>
+    <h2>Sistema Integrado de Rastreamento Agro</h2>
 
-    <a class="btn" href="https://siratechbrasil.com.br" target="_blank">🌐 Site Oficial</a>
-    <a class="btn" href="https://sira-tech.base44.app" target="_blank">📱 App Web (Base44)</a>
-    <a class="btn" href="https://hernandessilva11-hue.github.io/SIRA-TECH-/" target="_blank">🚀 Versão Web (GitHub)</a>
-    <a class="btn" href="https://youtu.be/X_E9SRV42gM" target="_blank">🎥 Vídeo Curricularização</a>
-    <a class="btn" href="https://youtube.com/shorts/RUnC9N1su0M" target="_blank">🚀 Pitch / Apresentação</a>
-    <a class="btn" href="https://trello.com" target="_blank">📌 Quadro Trello</a>
-    <a class="btn" href="https://drive.google.com" target="_blank">📄 PDF da Documentação</a>
+    <a class="button" href="https://siratechbrasil.com.br" target="_blank">🌐 Site Oficial</a>
+    <a class="button" href="https://sira-tech.base44.app" target="_blank">📱 App Web (Base44)</a>
+    <a class="button" href="https://hernandessilva11-hue.github.io/SIRA-TECH-/" target="_blank">🚀 Versão Web (GitHub)</a>
+    <a class="button" href="https://youtu.be/X_E9SRV42gM" target="_blank">🎥 Vídeo Curricularização</a>
+    <a class="button" href="https://youtube.com/shorts/RUnC9N1su0M" target="_blank">🚀 Pitch / Apresentação</a>
+    <a class="button" href="https://trello.com" target="_blank">📌 Quadro Trello</a>
+    <a class="button" href="https://siratechbrasil.com.br/documentacao.pdf" target="_blank">📄 PDF da Documentação</a>
 
-    <footer>
-        © 2025 — SIRA TECH - DESENVOLVIDO POR THIAGO HERNANDES ANALISATE DE VIABILIDADE 
-    </footer>
 </div>
+
+<footer>
+    © 2025 — SIRA TECH
+</footer>
 
 </body>
 </html>
+
